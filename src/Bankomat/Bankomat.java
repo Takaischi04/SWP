@@ -4,41 +4,46 @@ import java.util.Scanner;
 
 public class Bankomat {
     public static void main(String[] args) {
+        int balance = 0;
         boolean end = false;
-            System.out.println("1. Einzahlen");
-            System.out.println("2. Abheben");
-            System.out.println("3. Kontostand");
-            System.out.println("4. Beenden");
-            int Balance = 0;
+            System.out.println("1. Add money into account");
+            System.out.println("2. withdraw money from your account");
+            System.out.println("3. current balance");
+            System.out.println("4. close");
 
         while (!end) {
             System.out.println("what do you want to do?");
             Scanner scanner = new Scanner(System.in);
             int selection = scanner.nextInt();
 
-            if (selection == 1) {
-                System.out.println("How much should go into your account?");
-                int plus = scanner.nextInt();
-                System.out.println("Added " + plus + " into your account");
+            switch (selection) {
 
-            } else if (selection == 2) {
-                System.out.println("How much should be taken out?");
-                int minus = scanner.nextInt();
-                System.out.println("took " + minus +" out from your account");
+                case 1:
+                    System.out.println("How much should go into your account?");
+                    int plus = scanner.nextInt();
+                    balance = balance + plus;
+                    System.out.println("Added " + plus + " into your account.");
+                    break;
 
-            } else if (selection == 3) {
-                System.out.println("Your Balance: " + Balance);
+                case 2:
+                    System.out.println("How much should be taken out?");
+                    int minus = scanner.nextInt();
+                    balance = balance - minus;
+                    System.out.println("took " + minus +" out from your account.");
+                    break;
 
+                case 3:
+                    System.out.println("Your Balance: " + balance);
+                    break;
 
-            } else if (selection == 4) {
-                end = true;
-                System.out.println("Bye!");
+                case 4:
+                    end = true;
+                    System.out.println("Bye!");
 
-            } else {
-                System.out.println("Please select one of the given numbers");
+                default:
+                    System.out.println("Please select one of the given numbers!");
+
             }
         }
     }
 }
-
-
