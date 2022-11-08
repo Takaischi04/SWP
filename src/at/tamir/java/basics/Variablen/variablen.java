@@ -1,4 +1,4 @@
-package Variablen;
+package at.tamir.java.basics.Variablen;
 
 public class variablen {
     public static void main(String[] args) {
