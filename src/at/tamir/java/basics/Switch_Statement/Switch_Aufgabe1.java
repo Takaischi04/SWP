@@ -1,4 +1,4 @@
-package Switch_Statement;
+package at.tamir.java.basics.Switch_Statement;
 
 import java.util.Random;
 
