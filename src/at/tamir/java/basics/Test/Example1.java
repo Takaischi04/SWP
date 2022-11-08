@@ -1,4 +1,4 @@
-package Test;
+package at.tamir.java.basics.Test;
 
 import java.util.Random;
 
