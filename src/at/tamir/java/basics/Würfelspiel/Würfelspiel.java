@@ -1,4 +1,4 @@
-package Würfelspiel;
+package at.tamir.java.basics.Würfelspiel;
 
 import java.util.Random;
 import java.util.Scanner;
