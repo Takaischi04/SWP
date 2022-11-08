@@ -1,4 +1,4 @@
-package Loops;
+package at.tamir.java.basics.Loops;
 
 import java.util.Random;
 

@@ -1,4 +1,4 @@
-package Loops;
+package at.tamir.java.basics.Loops;
 
 public class Loops_Aufgabe1 {
     public static void main(String[]args) {
