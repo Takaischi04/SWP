@@ -1,4 +1,4 @@
-package IfBedingungen;
+package at.tamir.java.basics.IfBedingungen;
 
 import java.util.Random;
 
