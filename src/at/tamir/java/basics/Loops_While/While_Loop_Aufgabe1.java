@@ -1,4 +1,4 @@
-package Loops_While;
+package at.tamir.java.basics.Loops_While;
 
 import java.util.Random;
 

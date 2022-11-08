@@ -1,6 +1,5 @@
-package Loops_While;
+package at.tamir.java.basics.Loops_While;
 
-import java.sql.SQLOutput;
 import java.util.Random;
 
 public class While_Loop {
