@@ -1,4 +1,4 @@
-package Arrays;
+package at.tamir.java.basics.Arrays;
 
 import java.util.Random;
 

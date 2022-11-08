@@ -1,4 +1,4 @@
-package Arrays;
+package at.tamir.java.basics.Arrays;
 
 public class Aufgabe1 {
     public static void main(String[] args) {
