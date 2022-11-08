@@ -1,4 +1,4 @@
-package caesar_encrypt_decrypt;
+package at.tamir.java.basics.caesar_encrypt_decrypt;
 
 public class caesar {
     public static void main(String[] args) {
