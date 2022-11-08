@@ -1,4 +1,4 @@
-package Bankomat;
+package at.tamir.java.basics.Bankomat;
 
 import java.util.Scanner;
 
