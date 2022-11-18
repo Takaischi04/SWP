@@ -109,17 +109,28 @@ public class Calendar {
 
         //create the calendar
 
-        String[] dayOfTheWeek = {"| Mon ", "| Tue ", "| Wed ", "| Thu ", "| Fri ", "| Sat ", "| Sun |"};
+        String[] dayOfTheWeek = {"| MO |", "| TU |", "| WE |", "| TH |", "| FR |", "| SA |", "| SU |"};
         for (int i = 0; i < dayOfTheWeek.length; i++) {
             System.out.print(dayOfTheWeek[i]);
         }
 
         System.out.println(" ");
-        for (int i = 1; i < amountOfDays ; i++) {
-            System.out.print(i);
+
+        // create the shift
+        for (int x = 1; x < inputDay; x++) {
+            System.out.print("| -- |");
         }
 
+        for (int i = 1; i <= amountOfDays; i++) {
+                if (i < 10) {
+                    System.out.print("| " + i +"  |");
+                } else {
+                    System.out.print("| " + i + " |");
+                }
 
-
+                if ((i+inputDay-1) % 7 == 0){
+                    System.out.println(" ");
+            }
+        }
     }
 }
