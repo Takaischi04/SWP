@@ -4,54 +4,40 @@ public class Car_Main {
 
     // Manage cars
     public static void main(String[] args) {
-/*
-        Car c1 = new Car();
-        c1.brand = "Audi";
-        c1.fuelConsumption = 7;
-        c1.serialNumber = "A123";
-        c1.fuelAmount = 60;
-        c1.speed = 60;
-        c1.tankVolume = 70;
-        c1.amountOfRepetitions = 3;
 
-        Car c2 = new Car();
-        c2.brand = "Mercedes";
-        c2.fuelConsumption = 4;
-        c2.serialNumber = "B512";
-        c2.fuelAmount = 10;
-        c2.speed = 65;
-        c2.tankVolume = 70;
-*/
-        Car c1 = new Car(7,60,"Audi", "A123", "green", 60, 70, 2);
+        //Engine
+        Engine e1 = new Engine(140, Engine.TYPE.DIESEL, 100, 200, 50);
+
+        //Tank
+        Tank t1 = new Tank(5, 50, 50);
+
+        //Car
+        Car c1 = new Car("Audi","A123","green", 3, e1, t1);
+
 
         // Car 1 drive
         System.out.println("Drive!");
-        System.out.println("Fuel amount start: " + c1.getFuelAmount());
-        c1.getdrive();
-        System.out.println("Fuel amount end: " + c1.getFuelAmount());
+        e1.getdrive();
         System.out.println(" ");
 
         // Car 1 brake
         System.out.println("Brake!");
-        System.out.println("Current speed: " + c1.getSpeed());
-        c1.brake();
-        System.out.println("Speed after brake: " + c1.getSpeed());
+        System.out.println("Current speed: " + e1.getSpeed());
+        e1.brake();
+        System.out.println("Speed after brake: " + e1.getSpeed());
         System.out.println(" ");
 
         // Car 1 boost
         System.out.println("Turbo Boost!");
-        c1.turboBoost();
+        t1.turboBoost();
         System.out.println(" ");
 
         // Car 1 honk
-        c1.honk(c1.getAmountOfRepetitions());
+        e1.honk(c1.getAmountOfRepetitions());
         System.out.println(" ");
 
         // Car 1 RemainingRange
-        c1.getRemainingRange();
-
-        Engine c1 = new Engine(140,Engine.TYPE.DIESEL)
-
+        t1.getRemainingRange();
     }
 }
 
