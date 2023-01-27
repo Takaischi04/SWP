@@ -5,15 +5,31 @@ public class Car_Main {
     // Manage cars
     public static void main(String[] args) {
 
-        //Engine
+        // Engine
         Engine e1 = new Engine(140, Engine.TYPE.DIESEL, 100, 200, 50);
 
-        //Tank
+        // Tank
         Tank t1 = new Tank(5, 50, 50);
 
-        //Car
+        // Car
         Car c1 = new Car("Audi","A123","green", 3, e1, t1);
 
+        // Rear Mirrors
+        Rear_Mirrors r1 = new Rear_Mirrors(100,10);
+        Rear_Mirrors r2 = new Rear_Mirrors(100, -20);
+        c1.addMirror(r1);
+        c1.addMirror(r2);
+
+        // Wheels
+        Wheel w1 = new Wheel(90, Wheel.season.Summer, 20);
+        Wheel w2 = new Wheel(90, Wheel.season.Summer, 20);
+        Wheel w3 = new Wheel(90, Wheel.season.Summer, 20);
+        Wheel w4 = new Wheel(90, Wheel.season.Summer, 20);
+
+
+        // Car 1 Rear Mirror
+        System.out.println("Left Mirror Position: " + c1.getMirrors().get(0).getPosition() + "  Left Mirror size: " + c1.getMirrors().get(0).getSize());
+        System.out.println("Right Mirror Position: " + c1.getMirrors().get(1).getPosition() + "  Right Mirror size: " + c1.getMirrors().get(1).getSize());
 
         // Car 1 drive
         System.out.println("Drive!");

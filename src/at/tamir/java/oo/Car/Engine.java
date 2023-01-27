@@ -20,8 +20,8 @@ public class Engine {
 
     //Car drives
     public void getdrive() {
-        this.speed = this.maxSpeed / this.gasPedal;
-        System.out.println("Car ist driving with: " + this.speed + "km/h");
+        this.speed = (this.maxSpeed * this.gasPedal) / 100;
+        System.out.println("Car ist driving with: " + this.speed + " km/h");
     }
 
 
