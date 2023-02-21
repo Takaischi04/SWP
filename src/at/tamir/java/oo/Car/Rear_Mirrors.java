@@ -17,7 +17,6 @@ public class Rear_Mirrors {
     public void setSize(int size) {
         this.size = size;
     }
-
     public void setPosition(int position) {
         this.position = position;
     }
@@ -27,7 +26,6 @@ public class Rear_Mirrors {
     public int getSize() {
         return size;
     }
-
     public int getPosition() {
         return position;
     }

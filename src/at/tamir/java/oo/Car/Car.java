@@ -1,5 +1,4 @@
 package at.tamir.java.oo.Car;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -51,7 +50,6 @@ public class Car {
     public void setSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
     }
-
 
     // Getter
     public int getAmountOfRepetitions() {

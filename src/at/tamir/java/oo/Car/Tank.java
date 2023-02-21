@@ -6,7 +6,7 @@ public class Tank {
     private int tankVolume;
     private int remainingRange;
 
-    //Construkt: Tank
+    //Construktor: Tank
     public Tank (int fuelConsumption, int fuelAmount, int tankVolume){
         this.fuelConsumption = fuelConsumption;
         this.fuelAmount = fuelAmount;

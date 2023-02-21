@@ -30,6 +30,7 @@ public class Car_Main {
         // Car 1 Rear Mirror
         System.out.println("Left Mirror Position: " + c1.getMirrors().get(0).getPosition() + "  Left Mirror size: " + c1.getMirrors().get(0).getSize());
         System.out.println("Right Mirror Position: " + c1.getMirrors().get(1).getPosition() + "  Right Mirror size: " + c1.getMirrors().get(1).getSize());
+        System.out.println(" ");
 
         // Car 1 drive
         System.out.println("Drive!");
