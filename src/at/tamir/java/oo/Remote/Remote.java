@@ -6,22 +6,42 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Remote {
-    //Variables
+    // Variables
     private int hasPower;
     private List<Battery> battery;
 
-    //Constuctor: Remote
-    public Remote (int hasPower) {
+    private String color;
+
+
+    // Constuctor: Remote
+    public Remote (String color) {
         this.hasPower = hasPower;
         this.battery = new ArrayList<>();
+        this.color = color;
     }
 
-    //Method: getStatus
+    // Add Batteries
+    public void addBattery(Battery battery){
+        this.battery.add(battery);
+    }
 
-    //Method: turnOn
-    //Method: turnOff
 
-    //Getter
+    // Feature: getStatus
+    public void getStatus(){
+        this.hasPower = (getBattery().get(0).getChargingStatus() + getBattery().get(1).getChargingStatus()) / 2;
+    }
+
+
+    // Feature: turnOn()
+    public void turnOn(){
+        this.hasPower = this.hasPower - 5;
+    }
+
+
+    // Feature: turnOff()
+
+
+    // Getter
     public int getHasPower() {
         return hasPower;
     }
@@ -30,7 +50,12 @@ public class Remote {
         return battery;
     }
 
-    //Setter
+    public String getColor() {
+        return color;
+    }
+
+
+    // Setter
     public void setHasPower(int hasPower) {
         this.hasPower = hasPower;
     }
@@ -39,5 +64,8 @@ public class Remote {
         this.battery = battery;
     }
 
+    public void setColor(String color) {
+        this.color = color;
+    }
 
 }

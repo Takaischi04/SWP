@@ -9,13 +9,14 @@ public class Battery {
         this.chargingStatus = chargingStatus;
     }
 
-    //Getter
-    public int getChargingStatus() {
-        return chargingStatus;
-    }
-
     //Setter
     public void setChargingStatus(int chargingStatus) {
         this.chargingStatus = chargingStatus;
     }
+
+    //Getter
+    public int getChargingStatus() {
+        return chargingStatus;
+    }
 }
+
