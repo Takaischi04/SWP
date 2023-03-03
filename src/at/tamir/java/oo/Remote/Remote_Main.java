@@ -27,6 +27,7 @@ public class Remote_Main {
         System.out.println(" ");
 
         //Remote 1 Turn off
-
+        System.out.println("Current status: " + r1.getHasPower() + "%");
+        r1.turnOff();
     }
 }

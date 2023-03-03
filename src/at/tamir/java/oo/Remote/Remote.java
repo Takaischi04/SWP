@@ -39,6 +39,9 @@ public class Remote {
 
 
     // Feature: turnOff()
+    public void turnOff(){
+        this.hasPower = this.hasPower;
+    }
 
 
     // Getter
