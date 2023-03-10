@@ -34,4 +34,8 @@ public class SDMemoryCard {
     public int getCapacity() {
         return capacity;
     }
+
+    public List<PhoneFile> getFiles() {
+        return files;
+    }
 }

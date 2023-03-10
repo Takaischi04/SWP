@@ -13,10 +13,10 @@ public class SIM {
     }
 
 
-// FEATURES
+    // FEATURES
     // call()
-    public void call() {
-        System.out.println("SIM " + id + " calls " + number);
+    public void call(String number) {
+        System.out.println("SIM " + id + " " +this.number + " is calling: " + number);
     }
 
 // SETTER

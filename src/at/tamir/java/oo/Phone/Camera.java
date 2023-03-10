@@ -12,9 +12,9 @@ public class Camera {
     }
 
 
-// FEATURES
+    // FEATURES
     // takePicture() -> PhoneFile
-    public PhoneFile makePicture() {
+    public PhoneFile takePicture() {
         System.out.println("Taking picture");
         PhoneFile file = new PhoneFile("jpg", 1000, "picture" + fileNumber);
         fileNumber++;

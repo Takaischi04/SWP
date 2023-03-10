@@ -36,4 +36,7 @@ public class PhoneFile {
     public String getName() {
         return name;
     }
+    public String getInfo(){
+        return this.extension + " " + this.name + " " + this.size;
+    }
 }
