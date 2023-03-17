@@ -20,20 +20,24 @@ public class Phone {
     // takePicture()
     public void takePicture() {
         PhoneFile file = this.camera.takePicture();
-        System.out.println(file.getName());
+        System.out.println(file.getInfo());
     }
+
 
     // call(String)
     public void call(String number) {
         this.sim.call(number);
     }
+
+
     // getFreeSpace()
+    public int getFreeSpace() {
+        return this.sdMemoryCard.getFreeSpace();
+    }
+
     // printAllFiles()
-    public void printAllFiles() {
-        List<PhoneFile> files = this.sdMemoryCard.getFiles();
-        for (PhoneFile file : files) {
-            System.out.println(file.getName());
-        }
+    public List<PhoneFile> getAllFiles() {
+        return this.sdMemoryCard.getFiles();
     }
 
 

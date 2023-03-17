@@ -20,8 +20,22 @@ public class SDMemoryCard {
         files.add(file);
     }
 
+
     // getAllFiles() -> phoneFiles
+    public List<PhoneFile> getFiles() {
+        return files;
+    }
+
+
     // getFreeSpace()
+    public int getFreeSpace() {
+        int size = 0;
+        for (PhoneFile file : files) {
+            size += file.getSize();
+        }
+
+        return capacity - size;
+    }
 
 
 // SETTER
@@ -35,7 +49,4 @@ public class SDMemoryCard {
         return capacity;
     }
 
-    public List<PhoneFile> getFiles() {
-        return files;
-    }
 }

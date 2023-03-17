@@ -14,16 +14,6 @@ public class PhoneFile {
         this.name = name;
     }
 
-/*
-// Setter
-    public void setExtension(String extension) {
-        this.extension = extension;
-    }
-
-    public void setSize(int size) {
-        this.size = size;
-    }
-*/
 
 // Getter
     public String getExtension() {
@@ -37,6 +27,6 @@ public class PhoneFile {
         return name;
     }
     public String getInfo(){
-        return this.extension + " " + this.name + " " + this.size;
+        return this.extension + ":" + this.name + ":" + this.size;
     }
 }
