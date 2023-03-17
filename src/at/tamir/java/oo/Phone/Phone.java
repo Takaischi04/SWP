@@ -20,6 +20,7 @@ public class Phone {
     // takePicture()
     public void takePicture() {
         PhoneFile file = this.camera.takePicture();
+        this.sdMemoryCard.saveFile(file);
         System.out.println(file.getInfo());
     }
 
