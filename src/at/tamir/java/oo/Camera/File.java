@@ -48,4 +48,5 @@ public class File {
     public String getPicture(){
         return this.date + ":" + this.name + "   size:" + this.size;
     }
+
 }

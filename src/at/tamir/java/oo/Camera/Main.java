@@ -11,8 +11,20 @@ public class Main {
 
 // Features
 
-    //takePicture()
-        camera.takePicture();
+        while (true) {
+            System.out.println("Choose size of Picture");
+            System.out.println("1. Small, 2GB");
+            System.out.println("2. Medium, 4GB");
+            System.out.println("3. Large, 6GB");
+            System.out.println(" ");
 
+            // takePicture()
+            camera.takePicture();
+
+            // getAvailableSpace()
+            System.out.println("getAvailableSpace");
+            System.out.println("Remaining space: " + sdMemory.getAvailableSpace());
+            System.out.println("---");
+        }
     }
 }

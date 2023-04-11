@@ -2,7 +2,7 @@ package at.tamir.java.oo.Camera;
 import java.util.Scanner;
 
 public class Camera {
-// Add Scanner
+    // Add Scanner
     Scanner input = new Scanner(System.in);
 
 
@@ -18,7 +18,7 @@ public class Camera {
     private int pictureNumber = 0;
 
 
-// Constructor
+    // Constructor
     public Camera(String name, String country, int pixel, int weight, String color, Lens lens, SD_Memory sdMemory) {
         this.name = name;
         this.country = country;
@@ -33,31 +33,36 @@ public class Camera {
 // Features
 
     //takePicture()
-    public void takePicture() {
-        System.out.println("Choose size of Picture");
-        System.out.println("1. Small, 2GB");
-        System.out.println("2. Medium, 4GB");
-        System.out.println("3. Large, 6GB");
+    public File takePicture() {
+            int size = input.nextInt();
+            File file = null;
 
-        int size = input.nextInt();
-        switch (size) {
-            case 1:
-                System.out.println("Taking small picture");
-                File file = new File("small.jpg", 03212023, 2 + pictureNumber);
-                pictureNumber ++;
+            switch (size) {
+                case 1:
+                    System.out.println("Taking small picture");
+                    file = new File("small.jpg", 03212023, 2);
+                    pictureNumber++;
+                    break;
 
-                break;
+                case 2:
+                    System.out.println("Taking medium picture");
+                    file = new File("medium.jpg", 03212023, 4);
+                    pictureNumber++;
+                    break;
 
-            case 2:
-                System.out.println("Taking medium picture");
+                case 3:
+                    System.out.println("Taking large picture");
+                    file = new File("large.jpg", 03212023, 6);
+                    pictureNumber++;
+                    break;
 
-                break;
+                default:
+                    System.out.println("Wrong input");
+                    break;
+            }
 
-            case 3:
-                System.out.println("Taking large picture");
-
-                break;
-        }
+            this.sdMemory.savePicture(file);
+            System.out.println(file.getPicture());
+            return file;
     }
-
 }
