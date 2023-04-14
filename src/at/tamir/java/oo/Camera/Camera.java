@@ -1,4 +1,5 @@
 package at.tamir.java.oo.Camera;
+import java.time.LocalDate;
 import java.util.Scanner;
 
 public class Camera {
@@ -6,7 +7,7 @@ public class Camera {
     Scanner input = new Scanner(System.in);
 
 
-// Variables
+// Instance variables
 
     private String name;
     private String country;
@@ -15,7 +16,7 @@ public class Camera {
     private String color;
     private Lens lens;
     private SD_Memory sdMemory;
-    private int pictureNumber = 0;
+
 
 
     // Constructor
@@ -30,39 +31,42 @@ public class Camera {
     }
 
 
-// Features
+// Methods
 
     //takePicture()
     public File takePicture() {
+        if (this.sdMemory == null) {
+            System.out.println("Please insert SD Memory Card");
+        } else {
+
             int size = input.nextInt();
             File file = null;
 
             switch (size) {
                 case 1:
                     System.out.println("Taking small picture");
-                    file = new File("small.jpg", 03212023, 2);
-                    pictureNumber++;
+                    file = new File("small.jpg", LocalDate.now(), 2);
                     break;
 
                 case 2:
                     System.out.println("Taking medium picture");
-                    file = new File("medium.jpg", 03212023, 4);
-                    pictureNumber++;
+                    file = new File("medium.jpg", LocalDate.now(), 4);
                     break;
 
                 case 3:
                     System.out.println("Taking large picture");
-                    file = new File("large.jpg", 03212023, 6);
-                    pictureNumber++;
+                    file = new File("large.jpg", LocalDate.now(), 6);
                     break;
 
                 default:
-                    System.out.println("Wrong input");
+                    System.out.println("Invalid input");
                     break;
             }
 
-            this.sdMemory.savePicture(file);
-            System.out.println(file.getPicture());
+            sdMemory.savePicture(file);
+            System.out.println("Taken picture: " + file.getPicture());
             return file;
+        }
+        return null;
     }
 }

@@ -1,15 +1,16 @@
 package at.tamir.java.oo.Camera;
+import java.time.LocalDate;
 
 public class File {
-// Variables
+// Instance variables
 
     private String name;
-    private int date;
+    private LocalDate date;
     private int size;
 
 
 // Constructor
-    public File(String name, int date, int size) {
+    public File(String name, LocalDate date, int size) {
         this.name = name;
         this.date = date;
         this.size = size;
@@ -22,7 +23,7 @@ public class File {
         this.name = name;
     }
 
-    public void setDate(int date) {
+    public void setDate(LocalDate date) {
         this.date = date;
     }
 
@@ -37,7 +38,7 @@ public class File {
         return name;
     }
 
-    public int getDate() {
+    public LocalDate getDate() {
         return date;
     }
 

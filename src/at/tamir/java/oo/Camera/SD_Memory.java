@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SD_Memory {
-// Variables
+// Instance variables
 
     private int capacity;
     private List<File> files;
@@ -16,24 +16,35 @@ public class SD_Memory {
     }
 
 
-// Features
+// Methods
 
-    // savePicture()
-    public void savePicture(File file) {
-        files.add(file);
-    }
-
-    // getAvailableSpace
+    // getAvailableSpace()
     public int getAvailableSpace(){
         int size = 0;
-        for(File file : files) {
+        for (File file : files) {
             size += file.getSize();
         }
         return capacity - size;
     }
 
+    // savePicture()
+    public void savePicture(File file) {
+        int availableSpace = getAvailableSpace();
+        if (availableSpace < file.getSize()) {
+            System.out.println("No space available. Add SD-Memory Card");
+        } else {
+            files.add(file);
+            System.out.println("Picture saved. Remaining space: " + (availableSpace - file.getSize()));
+        }
+    }
 
-// Setter
+    // showAllPictures
+    public List<File> showAllPictures() {
+        return files;
+    }
+
+
+    // Setter
     public void setCapacity(int capacity) {
         this.capacity = capacity;
     }

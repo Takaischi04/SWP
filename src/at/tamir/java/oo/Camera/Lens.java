@@ -1,7 +1,7 @@
 package at.tamir.java.oo.Camera;
 
 public class Lens {
-// Variables
+// Instance variables
 
     private String producer;
     private int focalLength;
