@@ -1,6 +1,7 @@
 package at.tamir.java.oo.Camera;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class SD_Memory {
 // Instance variables
@@ -50,7 +51,7 @@ public class SD_Memory {
     }
 
 
-// Getter
+    // Getter
     public int getCapacity() {
         return capacity;
     }

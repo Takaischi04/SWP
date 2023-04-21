@@ -1,6 +1,10 @@
 package at.tamir.java.oo.Camera;
+import at.tamir.java.oo.Lamp.LightElement;
+
 import java.time.LocalDate;
 import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Camera {
     // Add Scanner
@@ -16,7 +20,7 @@ public class Camera {
     private String color;
     private Lens lens;
     private SD_Memory sdMemory;
-
+    private List<SD_Memory> sdMemorys;
 
 
     // Constructor
@@ -28,6 +32,7 @@ public class Camera {
         this.color = color;
         this.lens = lens;
         this.sdMemory = sdMemory;
+        sdMemorys = new ArrayList<SD_Memory>();
     }
 
 
@@ -58,6 +63,10 @@ public class Camera {
                     file = new File("large.jpg", LocalDate.now(), 6);
                     break;
 
+                case 4:
+                    addsdMemory(sdMemory);
+                    break;
+
                 default:
                     System.out.println("Invalid input");
                     break;
@@ -68,5 +77,10 @@ public class Camera {
             return file;
         }
         return null;
+    }
+    // addsdMemory()
+    public void addsdMemory(SD_Memory sdMemory) {
+        sdMemorys.add(sdMemory);
+        System.out.println(sdMemory.getCapacity() + " added SD-Memory");
     }
 }
