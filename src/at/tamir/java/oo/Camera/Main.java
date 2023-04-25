@@ -2,6 +2,7 @@ package at.tamir.java.oo.Camera;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -20,11 +21,19 @@ public class Main {
             System.out.println("1. Small, 2GB");
             System.out.println("2. Medium, 4GB");
             System.out.println("3. Large, 6GB");
-            System.out.println("4. Add SD-Memory Card");
+            System.out.println("4. Add 16GB SD-Memory Card");
             System.out.println(" ");
 
+            Scanner scanner = new Scanner(System.in);
+            int choice = scanner.nextInt();
+
             // takePicture()
-            camera.takePicture();
+            if (choice == 4) {
+                sdMemory.addSDMemory(32);
+                System.out.println("SD-Memory Card added.");
+            } else {
+                camera.takePicture(choice);
+            }
             System.out.println(" ");
 
             // showAllPictures

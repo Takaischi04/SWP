@@ -9,6 +9,8 @@ public class SD_Memory {
     private int capacity;
     private List<File> files;
 
+    private int currentSize;
+
 
 // Constructor
     public SD_Memory(int capacity) {
@@ -21,11 +23,11 @@ public class SD_Memory {
 
     // getAvailableSpace()
     public int getAvailableSpace(){
-        int size = 0;
+        currentSize = 0;
         for (File file : files) {
-            size += file.getSize();
+            currentSize += file.getSize();
         }
-        return capacity - size;
+        return capacity - currentSize;
     }
 
     // savePicture()
@@ -45,14 +47,22 @@ public class SD_Memory {
     }
 
 
-    // Setter
-    public void setCapacity(int capacity) {
-        this.capacity = capacity;
+    // addSDMemory
+    public void addSDMemory(int addedSDMemory){
+        capacity += addedSDMemory;
+        System.out.println("added: " + addedSDMemory);
     }
+
+
+    // Setter
 
 
     // Getter
     public int getCapacity() {
         return capacity;
+    }
+
+    public int getCurrentSize(){
+        return currentSize;
     }
 }

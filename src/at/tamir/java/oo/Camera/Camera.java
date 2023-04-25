@@ -1,5 +1,4 @@
 package at.tamir.java.oo.Camera;
-import at.tamir.java.oo.Lamp.LightElement;
 
 import java.time.LocalDate;
 import java.util.Scanner;
@@ -20,7 +19,7 @@ public class Camera {
     private String color;
     private Lens lens;
     private SD_Memory sdMemory;
-    private List<SD_Memory> sdMemorys;
+    private List<SD_Memory> sdMemorys = new ArrayList<SD_Memory>();
 
 
     // Constructor
@@ -32,55 +31,39 @@ public class Camera {
         this.color = color;
         this.lens = lens;
         this.sdMemory = sdMemory;
-        sdMemorys = new ArrayList<SD_Memory>();
+        this.sdMemorys = new ArrayList<SD_Memory>();
     }
 
 
 // Methods
 
     //takePicture()
-    public File takePicture() {
+    public File takePicture(int size) {
         if (this.sdMemory == null) {
             System.out.println("Please insert SD Memory Card");
         } else {
-
-            int size = input.nextInt();
             File file = null;
-
             switch (size) {
                 case 1:
                     System.out.println("Taking small picture");
                     file = new File("small.jpg", LocalDate.now(), 2);
                     break;
-
                 case 2:
                     System.out.println("Taking medium picture");
                     file = new File("medium.jpg", LocalDate.now(), 4);
                     break;
-
                 case 3:
                     System.out.println("Taking large picture");
                     file = new File("large.jpg", LocalDate.now(), 6);
                     break;
-
-                case 4:
-                    addsdMemory(sdMemory);
-                    break;
-
                 default:
                     System.out.println("Invalid input");
                     break;
             }
-
             sdMemory.savePicture(file);
             System.out.println("Taken picture: " + file.getPicture());
             return file;
         }
         return null;
-    }
-    // addsdMemory()
-    public void addsdMemory(SD_Memory sdMemory) {
-        sdMemorys.add(sdMemory);
-        System.out.println(sdMemory.getCapacity() + " added SD-Memory");
     }
 }
